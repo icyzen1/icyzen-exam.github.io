@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoGlow Desk — Розумний міні-сад</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f1;
+            padding: 30px 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 850px;
+            border: 2px solid #2d3e2e;
+            background-color: #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 2px solid #2d3e2e;
+        }
+
+        /* Хедер */
+        .header {
+            background-color: #e2ede4;
+            justify-content: space-between;
+            padding: 20px 40px;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #2d3e2e; }
+        .tagline { font-size: 0.9rem; color: #5a735e; font-style: italic; }
+
+        /* Блок Features */
+        .features {
+            background-color: #f7f9f7;
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .feature-item {
+            flex: 1;
+            min-width: 150px;
+            padding: 10px;
+            font-size: 0.95rem;
+            color: #333;
+        }
+        .feature-item strong { color: #2d3e2e; display: block; margin-bottom: 5px; }
+
+        /* Контентний блок */
+        .main-content {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            border-bottom: 2px solid #2d3e2e;
+        }
+
+        .about-us, .contact {
+            flex: 1;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .about-us {
+            background-color: #fff;
+            border-right: 2px solid #2d3e2e;
+        }
+
+        .contact {
+            background-color: #fafafa;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        /* Заглушка для фото продукту */
+        .product-img-box {
+            width: 100%;
+            height: 180px;
+            background-color: #e2ede4;
+            border: 2px dashed #2d3e2e;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #2d3e2e;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2d3e2e;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .product-desc {
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* Футер */
+        .footer {
+            background-color: #e2ede4;
+            border-bottom: none;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .shipping-info {
+            font-size: 0.85rem;
+            color: #5a735e;
+        }
+
+        .buy-btn {
+            background-color: #2d3e2e;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .buy-btn:hover {
+            background-color: #415a44;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 650px) {
+            .main-content { flex-direction: column; }
+            .about-us { border-right: none; border-bottom: 2px solid #2d3e2e; }
+            .header { flex-direction: column; gap: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- HEADER -->
+        <header class="block header">
+            <div class="logo">🌿 EcoGlow Desk</div>
+            <div class="tagline">Твій особистий зелений оазис на столі</div>
+        </header>
+
+        <!-- FEATURES -->
+        <section class="block features">
+            <div class="feature-item">
+                <strong>💧 Автополив</strong>
+                Достатньо заправити резервуар раз на 2 тижні.
+            </div>
+            <div class="feature-item">
+                <strong>☀️ Спектральне світло</strong>
+                Прискорює ріст рослин та покращує ваш настрій.
+            </div>
+            <div class="feature-item">
+                <strong>🔋 USB-живлення</strong>
+                Працює прямо від вашого ноутбука або повербанка.
+            </div>
+        </section>
+
+        <!-- MAIN CONTENT (ABOUT US & CONTACT) -->
+        <div class="main-content">
+            <!-- Лівий блок: Зображення (за схемою About Us) -->
+            <article class="about-us">
+                <div class="section-title">Галерея</div>
+                <div class="product-img-box">
+                    📸 [ Фото смарт-саду EcoGlow ]
+                </div>
+            </article>
+            
+            <!-- Правий блок: Опис (за схемою Contact) -->
+            <aside class="contact">
+                <div class="section-title">Про продукт</div>
+                <p class="product-desc">
+                    EcoGlow — це інноваційний гаджет для робочого простору. Він поєднує в собі функцію «розумного» горщика для свіжої зелені чи квітів та стильної настільної лампи. Очищує повітря навколо вас, знімає стрес та ідеально доповнює інтер'єр сучасного офісу чи дому.
+                </p>
+            </aside>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="block footer">
+            <button class="buy-btn">Замовити за 1499 грн</button>
+            <div class="shipping-info">🚚 Безкоштовна доставка по всій Україні • Гарантія 12 місяців</div>
+        </footer>
+    </div>
+
+</body>
+</html>
